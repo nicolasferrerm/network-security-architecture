@@ -1,0 +1,16 @@
+{
+  "name": "segmented-enterprise-reference",
+  "zones": [
+    {"name": "internet", "trust": 0},
+    {"name": "dmz", "trust": 1},
+    {"name": "user", "trust": 2},
+    {"name": "management", "trust": 3},
+    {"name": "restricted", "trust": 4}
+  ],
+  "flows": [
+    {"source": "internet", "destination": "dmz", "protocol": "tcp", "port": "443", "action": "allow", "logged": true},
+    {"source": "user", "destination": "dmz", "protocol": "tcp", "port": "443", "action": "allow", "logged": true},
+    {"source": "management", "destination": "restricted", "protocol": "tcp", "port": "22", "action": "allow", "mfa": true, "logged": true},
+    {"source": "internet", "destination": "restricted", "protocol": "tcp", "port": "443", "action": "deny", "logged": true}
+  ]
+}
