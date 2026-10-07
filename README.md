@@ -1,4 +1,4 @@
-# Network Security Architecture
+# Network Segmentation Policy Validator
 
 [![Architecture Validation](https://github.com/nicolasferrerm/network-security-architecture/actions/workflows/ci.yml/badge.svg)](https://github.com/nicolasferrerm/network-security-architecture/actions/workflows/ci.yml)
 
